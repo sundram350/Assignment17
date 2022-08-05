@@ -1,0 +1,102 @@
+Ans=1
+int main()
+{
+    char str[10];
+    int i,count=0;
+    printf("Enter String\n");
+    scanf("%s",str);
+    for(i=0;str[i]!='\0';i++)
+        count++;
+    printf("%d ",count);
+    return 0;
+}
+
+Ans=4
+int main()
+{
+    char s[10];
+    printf("Enter String\n");
+    scanf("%s",s);
+    upper(s);
+    return 0;
+}
+upper(char s[])
+{
+    char i,n[10];
+    int j;
+    for(j=0;j<10;j++)
+        for(i='z';i>='a';i--)
+        if(i==s[j])
+        s[j]=s[j]-32;
+    printf("%s ",s);
+}
+Ans=5
+int main()
+{
+    char s[10];
+    printf("Enter String\n");
+    scanf("%s",s);
+    lower(s);
+    return 0;
+}
+lower(char s[])
+{
+    char i,n[10];
+    int j;
+    for(j=0;j<10;j++)
+        for(i='Z';i>='A';i--)
+        if(i==s[j])
+        s[j]=s[j]+32;
+    printf("%s ",s);
+}
+Ans=6
+int main()
+{
+    char s[10];
+    printf("Enter a String\n");
+    scanf("%s",s);
+    rev(s);
+    return 0;
+}
+rev(char s[])
+{
+    int i,tem[10],j;
+        for(i=0;i<10;i++)
+        if(tem[9-i]!='\0')
+            tem[9-i]=s[i];
+    for(i=0;i<=9;i++)
+        if(tem[i]!='\0')
+    printf("%c",tem[i]);
+}
+
+Ans=8
+int main()
+{
+    char cpy[10],arr[10],i,j;
+    printf("Enter a String\n");
+    scanf("%s",arr);
+    printf("\n");
+    printf("Enter Copy String");
+    for(i=0;i<10;i++)
+        if(arr[i]!='\0')
+            cpy[i]=arr[i];
+    printf("\n%s ",cpy);
+    return 0;
+}
+
+Ans=3
+int main()
+{
+    char arr[10],vowel[]={'a','e','i','o','u'},count=0,i,j;
+    printf("Enter String ");
+    scanf("%s",arr);
+    printf("%s ",arr);
+
+
+    for(i=0;i<10;i++)
+        for(j=0;j<5;j++)
+            if(vowel[j]==arr[i])
+             count++;
+
+    printf("\n%d",count);
+}
